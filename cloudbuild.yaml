@@ -9,7 +9,7 @@ steps:
   args: ['ls']
 - name: 'maven'
   entrypoint: 'mvn'
-  args: ['-X','test']
+  args: ['test', '-P', 'local']
   env:
   - 'LT_USERNAME=${_LT_USERNAME}'
   - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
