@@ -9,10 +9,10 @@ steps:
   args: ['ls']
 - name: 'maven'
   entrypoint: 'mvn'
-  args: ['clean', 'install', '-DskipTests']
+  args: ['install', '-DskipTests']
 - name: 'maven'
   entrypoint: 'mvn'
-  args: ['test', '-P', 'parallel']
+  args: ['-o', 'test']
   env:
   - 'LT_USERNAME=${_LT_USERNAME}'
   - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
