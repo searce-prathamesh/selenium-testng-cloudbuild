@@ -12,7 +12,7 @@ steps:
   args: ['install', '-DskipTests']
 - name: 'maven'
   entrypoint: 'mvn'
-  args: ['-o', 'test']
+  args: ['-X', 'test']
   env:
   - 'LT_USERNAME=${_LT_USERNAME}'
   - 'LT_ACCESS_KEY=${_LT_ACCESS_KEY}'
