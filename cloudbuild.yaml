@@ -9,7 +9,7 @@ steps:
   args: ['ls']
 - name: 'maven'
   entrypoint: 'mvn'
-  args: ['clean', 'install']
+  args: ['clean', 'install', '-DskipTests']
 - name: 'maven'
   entrypoint: 'mvn'
   args: ['test', '-P', 'parallel']
